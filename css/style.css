@@ -1,0 +1,23 @@
+:root {
+    --n-cell-for-row: 10; 
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+
+    width: 50rem;
+    height: 50rem;
+}
+
+.square{
+    border: solid 3px blue;
+    width: calc(100% / var(--n-cell-for-row));
+    height: calc(100% / var(--n-cell-for-row));
+}
+
+.highlight {
+    background: fuchsia;
+}
