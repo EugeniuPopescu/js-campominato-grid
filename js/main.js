@@ -1,28 +1,93 @@
-// creo una griglia dinamica, inserendo N elemnti .square nel container
-let nCells = 100;
+const diff1 = document.querySelector('#diff1');
+const diff2 = document.querySelector('#diff2');
+const diff3 = document.querySelector('#diff3');
 
-// mi prendo la mia griglia
-let grid = document.querySelector('#grid');
+diff1.addEventListener('click', function() {
+    // creo una griglia dinamica, inserendo N elemnti .square nel container
+    let nCells = 100;
 
-// prendo il pulsante PLAY
-const play = document.querySelector('#play');
+    // mi prendo la mia griglia
+    let grid = document.querySelector('#grid');
 
-// faccio apparire la mia griglia al click del play
-play.addEventListener('click', function() {
-    
-    // FOR che mi cicla da 1 cella a nCells che ho impostato
-    for (let i = 1; i <= nCells; i++) {
+    // prendo il pulsante PLAY
+    const play = document.querySelector('#play');
 
+    // faccio apparire la mia griglia al click del play
+    play.addEventListener('click', function() {
         
-        let cell = createSquare(i);
-        // metto il div nel mio cell nella dabella grid
-        grid.appendChild(cell);
-        
-        // mi segna il numero della cella
-        cell.innerHTML = i;
-    }
+        // FOR che mi cicla da 1 cella a nCells che ho impostato
+        for (let i = 1; i <= nCells; i++) {
+
+            
+            let cell = createSquare(i);
+            // metto il div nel mio cell nella dabella grid
+            grid.appendChild(cell);
+            
+            // mi segna il numero della cella
+            cell.innerHTML = i;
+        }
+    });
 });
 
+
+
+diff2.addEventListener('click', function() {
+    document.documentElement.style.setProperty('--n-cell-for-row', 9);
+    // creo una griglia dinamica, inserendo N elemnti .square nel container
+    let nCells = 81;
+
+    // mi prendo la mia griglia
+    let grid = document.querySelector('#grid');
+
+    // prendo il pulsante PLAY
+    const play = document.querySelector('#play');
+
+    // faccio apparire la mia griglia al click del play
+    play.addEventListener('click', function() {
+        
+        // FOR che mi cicla da 1 cella a nCells che ho impostato
+        for (let i = 1; i <= nCells; i++) {
+
+            
+            let cell = createSquare(i);
+            // metto il div nel mio cell nella dabella grid
+            grid.appendChild(cell);
+            
+            // mi segna il numero della cella
+            cell.innerHTML = i;
+        }
+    });
+});
+
+diff3.addEventListener('click', function() {
+
+    document.documentElement.style.setProperty('--n-cell-for-row', 7);
+
+    // creo una griglia dinamica, inserendo N elemnti .square nel container
+    let nCells = 49;
+
+    // mi prendo la mia griglia
+    let grid = document.querySelector('#grid');
+
+    // prendo il pulsante PLAY
+    const play = document.querySelector('#play');
+
+    // faccio apparire la mia griglia al click del play
+    play.addEventListener('click', function() {
+        
+        // FOR che mi cicla da 1 cella a nCells che ho impostato
+        for (let i = 1; i <= nCells; i++) {
+
+            
+            let cell = createSquare(i);
+            // metto il div nel mio cell nella dabella grid
+            grid.appendChild(cell);
+            
+            // mi segna il numero della cella
+            cell.innerHTML = i;
+        }
+    });
+});
 
 function createSquare(i) {
     // creo il mio div
