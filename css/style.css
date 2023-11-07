@@ -16,6 +16,12 @@
     border: solid 3px blue;
     width: calc(100% / var(--n-cell-for-row));
     height: calc(100% / var(--n-cell-for-row));
+
+    color: springgreen;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .highlight {
