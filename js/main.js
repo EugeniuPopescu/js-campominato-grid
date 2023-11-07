@@ -2,7 +2,17 @@ const diff1 = document.querySelector('#diff1');
 const diff2 = document.querySelector('#diff2');
 const diff3 = document.querySelector('#diff3');
 
+const reset = document.querySelector('#reset');
+
+reset.addEventListener('click', function() {
+    location.reload();
+});
+
+
 diff1.addEventListener('click', function() {
+    // add class active
+    diff1.classList.add('active');
+
     // creo una griglia dinamica, inserendo N elemnti .square nel container
     let nCells = 100;
 
@@ -30,8 +40,10 @@ diff1.addEventListener('click', function() {
 });
 
 
-
 diff2.addEventListener('click', function() {
+    // add class active
+    diff2.classList.add('active');
+
     document.documentElement.style.setProperty('--n-cell-for-row', 9);
     // creo una griglia dinamica, inserendo N elemnti .square nel container
     let nCells = 81;
@@ -60,6 +72,8 @@ diff2.addEventListener('click', function() {
 });
 
 diff3.addEventListener('click', function() {
+    // add class active
+    diff3.classList.add('active');
 
     document.documentElement.style.setProperty('--n-cell-for-row', 7);
 
